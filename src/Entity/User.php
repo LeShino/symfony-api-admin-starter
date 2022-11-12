@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use App\Repository\UserRepository;
 use App\EntityListener\UserListener;
@@ -12,6 +14,8 @@ use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 
 /**
@@ -33,27 +37,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\Email()
+     * @Assert\Length(min=2, max=180)
      */
     private $email;
 
     /**
      * @ORM\Column(type="json")
+     * @Assert\NotNull()
      */
     private $roles = [];
 
     /**
      * @var string The hashed password
      * @ORM\Column(type="string")
+     *
+     * @Assert\Length(min=6)
      */
     private $password;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Nom requis")
+     * @Assert\Length(min=2, max=50)
      */
     private $firstName;
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="Prénoms requis")
+     * @Assert\Length(min=2, max=50)
      */
     private $lastName;
 
@@ -87,6 +100,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     private $plainPassword;
 
     private $newPassword;
+
+    /**
+     * @ORM\Column(type="boolean", nullable=true)
+     */
+    private $status;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Transaction::class, mappedBy="tuser")
+     */
+    private $transactions;
+
+    /**
+     * @ORM\OneToMany(targetEntity=Reversement::class, mappedBy="marchand")
+     */
+    private $reversements;
+
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $clientId;
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    private $clientSecret;
+
+    /**
+     * @ORM\Column(type="boolean" , options={"default":1})
+     */
+    private $isMarchand = true;
 
     public function getPlainPassword()
     {
@@ -150,6 +193,8 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function __construct()
     {
         $this->createdAt = new \DateTimeImmutable;
+        $this->transactions = new ArrayCollection();
+        $this->reversements = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -167,6 +212,16 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
         $this->email = $email;
 
         return $this;
+    }
+
+    public function toArray(): array
+    {
+        return [
+            'id' => $this->id,
+            'nom' => $this->firstName,
+            'prenoms' => $this->lastName,
+            'email' => $this->email,
+        ];
     }
 
     /**
@@ -297,6 +352,114 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setUpdatedAt(?\DateTimeImmutable $updatedAt): self
     {
         $this->updatedAt = $updatedAt;
+
+        return $this;
+    }
+
+    public function isStatus(): ?bool
+    {
+        return $this->status;
+    }
+
+    public function setStatus(?bool $status): self
+    {
+        $this->status = $status;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Transaction>
+     */
+    public function getTransactions(): Collection
+    {
+        return $this->transactions;
+    }
+
+    public function addTransaction(Transaction $transaction): self
+    {
+        if (!$this->transactions->contains($transaction)) {
+            $this->transactions[] = $transaction;
+            $transaction->setTuser($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTransaction(Transaction $transaction): self
+    {
+        if ($this->transactions->removeElement($transaction)) {
+            // set the owning side to null (unless already changed)
+            if ($transaction->getTuser() === $this) {
+                $transaction->setTuser(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Reversement>
+     */
+    public function getReversements(): Collection
+    {
+        return $this->reversements;
+    }
+
+    public function addReversement(Reversement $reversement): self
+    {
+        if (!$this->reversements->contains($reversement)) {
+            $this->reversements[] = $reversement;
+            $reversement->setMarchand($this);
+        }
+
+        return $this;
+    }
+
+    public function removeReversement(Reversement $reversement): self
+    {
+        if ($this->reversements->removeElement($reversement)) {
+            // set the owning side to null (unless already changed)
+            if ($reversement->getMarchand() === $this) {
+                $reversement->setMarchand(null);
+            }
+        }
+
+        return $this;
+    }
+
+    public function getClientId(): ?int
+    {
+        return $this->clientId;
+    }
+
+    public function setClientId(?int $clientId): self
+    {
+        $this->clientId = $clientId;
+
+        return $this;
+    }
+
+    public function getClientSecret(): ?string
+    {
+        return $this->clientSecret;
+    }
+
+    public function setClientSecret(?string $clientSecret): self
+    {
+        $this->clientSecret = $clientSecret;
+
+        return $this;
+    }
+
+    public function isIsMarchand(): ?bool
+    {
+        return $this->isMarchand;
+    }
+
+    public function setIsMarchand(bool $isMarchand): self
+    {
+        $this->isMarchand = $isMarchand;
 
         return $this;
     }

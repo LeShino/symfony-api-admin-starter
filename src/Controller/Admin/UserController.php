@@ -25,7 +25,8 @@ class UserController extends AbstractController
     public function index(UserRepository $users): Response
     {
         return $this->render('admin/user/index.html.twig', [
-            'users' => $users->findAll(),
+            // 'users' => $users->findByRole('ROLE_ADMIN'),
+            'users' => $users->findBy(array('isMarchand' => false)),
         ]);
     }
 
@@ -178,6 +179,46 @@ class UserController extends AbstractController
             'success',
             'Utilisateur supprimé avec succès!'
         );
+
+        return $this->redirectToRoute('app_admin_user');
+    }
+
+
+    /**
+     * @Route("admin/utilisateurs/{id}/change-status", name="user_changeStatus", methods={"POST"})
+     *
+     * @param User $user
+     * @param EntityManagerInterface $manager
+     * @return Response
+     */
+    public function changeUserStatus(User $user, EntityManagerInterface $manager): Response
+    {
+        if (!$user) {
+            $this->addFlash(
+                'error',
+                'Utilisateur non trouvé!'
+            );
+            return $this->redirectToRoute('app_admin_user');
+        }
+
+        if ($user->isStatus() == false) {
+            $user->setStatus(true);
+
+            $this->addFlash(
+                'success',
+                'Utilisateur activé avec succès!'
+            );
+        } else {
+            $user->setStatus(false);
+
+            $this->addFlash(
+                'success',
+                'Utilisateur désactivé avec succès!'
+            );
+        }
+
+        $manager->persist($user);
+        $manager->flush();
 
         return $this->redirectToRoute('app_admin_user');
     }

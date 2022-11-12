@@ -305,5 +305,18 @@
         "files": [
             "./config/packages/vich_uploader.yaml"
         ]
+    },
+    "wouterj/eloquent-bundle": {
+        "version": "2.2",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "main",
+            "version": "1.0",
+            "ref": "b39da4df8d90e09040061dbfd450ac02e1df29d2"
+        },
+        "files": [
+            "./config/packages/eloquent.yaml",
+            "./src/Model/.gitignore"
+        ]
     }
 }

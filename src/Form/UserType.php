@@ -55,6 +55,7 @@ class UserType extends AbstractType
                 'attr' => ['class' => 'form-control', 'placeholder' => 'Adresse email',],
             ])
             ->add('imageFile', VichImageType::class, [
+                'required' => false,
                 'attr' => ['class' => 'file-upload'],
             ])
             ->add('roles', ChoiceType::class, [

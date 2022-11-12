@@ -4,509 +4,600 @@
 {% endblock %}
 
 {% block body %}
+	<div class="row content-body">
 
-	<div class="container-fluid">
-		<div class="row content-body">
-			<div class="col-sm-6 col-md-6 col-lg-3">
-				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
-					<div class="iq-card-body iq-box-relative">
-						<div class="iq-service d-flex align-items-center justify-content-between">
-							<div class="service-data">
-								<h2>24%</h2>
-								<p class="mb-0">Service used</p>
-							</div>
-							<div id="service-chart-01" class="service-chart"></div>
-						</div>
+		<div class="col-lg-8">
+			<div class="iq-card iq-card-block iq-card-stretch iq-card-height iq-bg-danger">
+				<div class="iq-card-body box iq-box-relative">
+					<div class="box-image float-right">
+						<img class="rounded img-fluid" src="images/page-img/37.png" alt="profile">
 					</div>
+					<h4 class="d-block mb-3 text-black">Welcome back John</h4>
+					<p class="d-inline-block welcome-text text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vulputate facilisis velit, vitae fermentum nulla ultrices et.</p>
 				</div>
 			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3">
-				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
-					<div class="iq-card-body iq-box-relative">
-						<div class="iq-service d-flex align-items-center justify-content-between">
-							<div class="service-data">
-								<h2>2.5</h2>
-								<p class="mb-0">GB Stored</p>
-							</div>
-							<div id="service-chart-02" class="service-chart"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3">
-				<div class="iq-card iq-card-block iq-card-stretch iq-card-height bg-danger">
-					<div class="iq-card-body iq-box-relative">
-						<div class="iq-service d-flex align-items-center justify-content-between">
-							<div class="service-data">
-								<h2 class="text-white">351</h2>
-								<p class="mb-0">User Collected</p>
-							</div>
-							<div id="service-chart-03" class="service-chart"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-sm-6 col-md-6 col-lg-3">
-				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
-					<div class="iq-card-body iq-box-relative">
-						<div class="iq-service d-flex align-items-center justify-content-between">
-							<div class="service-data">
-								<h2>4,852</h2>
-								<p class="mb-0">Visitors</p>
-							</div>
-							<div id="service-chart-04" class="service-chart"></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-7">
-				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
-					<div class="iq-card-header d-flex justify-content-between">
-						<div class="iq-header-title">
-							<h4 class="card-title">Response Graph</h4>
-						</div>
-						<div class="mt-1">
-							<div class="d-flex align-items-center justify-content-between">
-								<a href="javascript:void();" class="d-flex align-items-center mr-4">
-									<span class="bg-danger p-1 rounded mr-2"></span>
-									<p class="text-danger mb-0">Response Time</p>
-								</a>
-								<div class="iq-card-header-toolbar d-flex align-items-center">
-									<div class="dropdown">
-                                       <span class="dropdown-toggle dropdown-bg iq-bg-primary" id="dropdownMenuButton1" data-toggle="dropdown">
-                                       7 Days<i class="ri-arrow-down-s-line ml-1 text-primary"></i>
-                                       </span>
-										<div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton1">
-											<a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-											<a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-											<a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
-											<a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Print</a>
-											<a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-										</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+				<div class="iq-card-body">
+					<ul class="suggestions-lists m-0 p-0">
+						<li class="d-flex mb-4 align-items-center justify-content-between">
+							<div class="col-sm-9 p-0">
+								<div class="d-flex align-items-center">
+									<div class="avatar-55 text-center rounded iq-bg-danger">
+										<span>B5</span>
+									</div>
+									<div class="media-support-info ml-3">
+										<h5>Loads</h5>
+										<p class="mb-0">Online Participant</p>
 									</div>
 								</div>
 							</div>
-						</div>
-					</div>
+							<div class="col-sm-3 p-0">
+								<div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+									<div class="iq-progress-bar">
+										<span class="bg-danger" data-percent="50"></span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li class="d-flex align-items-center justify-content-between">
+							<div class="col-sm-9 p-0">
+								<div class="d-flex align-items-center">
+									<div class="avatar-55 text-center rounded iq-bg-primary">
+										<span>G2</span>
+									</div>
+									<div class="media-support-info ml-3">
+										<h5>Requests</h5>
+										<p class="mb-0">Offline Participant</p>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-3 p-0">
+								<div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+									<div class="iq-progress-bar">
+										<span class="bg-primary" data-percent="80"></span>
+									</div>
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-8 row m-0 p-0">
+			<div class="col-sm-6 col-md-6 col-lg-3">
+				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
 					<div class="iq-card-body">
-						<div id="activies-chart-01"></div>
+						<div class="icon iq-icon-box iq-bg-primary rounded" data-wow-delay="0.2s">
+							<i class="ri-cpu-line"></i>
+						</div>
+						<div class="mt-4">
+							<h5 class="text-black text-uppercase">CPU</h5>
+							<h3 class="d-flex text-primary">
+								4.8%<i class="ri-arrow-up-line"></i>
+							</h3>
+						</div>
+						<p class="mb-0 mt-1">Avg +65%</p>
+						<div class="mt-3">
+							<div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+								<div class="iq-progress-bar">
+									<span class="bg-primary" data-percent="65"></span>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-5">
+			<div class="col-sm-6 col-md-6 col-lg-3">
 				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
 					<div class="iq-card-body">
+						<div class="icon iq-icon-box iq-bg-danger rounded" data-wow-delay="0.2s">
+							<i class="ri-window-line"></i>
+						</div>
+						<div class="mt-4">
+							<h5 class="text-black text-uppercase">RAM</h5>
+							<h3 class="d-flex text-danger">
+								4.2%<i class="ri-arrow-down-line"></i>
+							</h3>
+						</div>
+						<p class="mb-0 mt-1">Avg +85%</p>
+						<div class="mt-3">
+							<div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+								<div class="iq-progress-bar">
+									<span class="bg-danger" data-percent="85"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-3">
+				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+					<div class="iq-card-body">
+						<div class="icon iq-icon-box iq-bg-primary rounded" data-wow-delay="0.2s">
+							<i class="ri-u-disk-line"></i>
+						</div>
+						<div class="mt-4">
+							<h5 class="text-black text-uppercase">DISK</h5>
+							<h3 class="d-flex text-primary">
+								5.8GB<i class="ri-arrow-up-line"></i>
+							</h3>
+						</div>
+						<p class="mb-0 mt-1">Avg +36%</p>
+						<div class="mt-3">
+							<div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+								<div class="iq-progress-bar">
+									<span class="bg-primary" data-percent="36"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-sm-6 col-md-6 col-lg-3">
+				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+					<div class="iq-card-body">
+						<div class="icon iq-icon-box iq-bg-danger rounded" data-wow-delay="0.2s">
+							<i class="ri-global-line"></i>
+						</div>
+						<div class="mt-4">
+							<h5 class="text-black text-uppercase">SERVICES</h5>
+							<h3 class="d-flex text-danger">
+								3.5KB<i class="ri-arrow-down-line"></i>
+							</h3>
+						</div>
+						<p class="mb-0 mt-1">Avg +48%</p>
+						<div class="mt-3">
+							<div class="iq-progress-bar-linear d-inline-block mt-1 w-100">
+								<div class="iq-progress-bar">
+									<span class="bg-danger" data-percent="48"></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="iq-card bg-danger iq-card-block iq-card-stretch iq-card-height-half">
+				<div class="iq-card-body box iq-box-relative">
+					<div class="d-flex flex-wrap justify-content-between align-items-center">
+						<div class="col-7 p-0">
+							<div class="float-left progress-round income-progress mr-3" data-value="80">
+								<span class="progress-left">
+									<span class="progress-bar border-white" style="transform: rotate(108deg);"></span>
+								</span>
+								<span class="progress-right">
+									<span class="progress-bar border-white" style="transform: rotate(180deg);"></span>
+								</span>
+								<div class="progress-value w-100 h-100 rounded d-flex align-items-center justify-content-center text-center">
+									<div class="h4 mb-0">75</div>
+								</div>
+							</div>
+							<h5 class="d-block mt-2 text-white font-weight-500">Storage<br>
+								Usage</h5>
+						</div>
+						<div
+							class="col-5 pr-0 right-border-block position-relative">
+							<!-- <div class="avatar-30 text-center rounded-circle iq-bg-danger" data-wow-delay="0.2s">
+																																																																																																											                                    <span class="font-size-14 align-item-center"><i class="ri-account-box-line"></i></span>
+																																																																																																											                                 </div> -->
+							<h5 class="text-white mt-2">594875625</h5>
+							<span class="text-white">Online Users</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="iq-card iq-card-block iq-card-stretch iq-card-height-half iq-background-image">
+				<div class="iq-card-body box iq-box-relative rounded">
+					<div class="d-flex justify-content-between align-items-left">
 						<div class="d-flex justify-content-between align-items-center">
-							<div class="icon avatar-70 bg-danger iq-border-danger rounded-circle line-height-5 text-center">
-								<i class="ri-alert-line"></i>
+							<div class="float-left progress-round income-progress" data-value="80">
+								<span class="progress-left">
+									<span class="progress-bar border-primary" style="transform: rotate(108deg);"></span>
+								</span>
+								<span class="progress-right">
+									<span class="progress-bar border-success" style="transform: rotate(180deg);"></span>
+								</span>
 							</div>
-							<div class="right-detail text-right">
-								<p class="mb-0">Total Traffic</p>
-								<h3>136.486<span class="font-size-12">TPS</span></h3>
+							<div class="pl-3">
+								<ul class="float-right d-inline-block p-0 m-0 list-inline">
+									<li class="line-height-3">
+										<span class="text-danger total-progress position-relative pl-2">
+											<span class="bg-danger rounded"></span>Total Processes: 61<i class="ri-arrow-up-line"></i>
+										</span>
+									</li>
+									<li class="line-height-3">
+										<span class="text-primary total-progress position-relative pl-2">
+											<span class="bg-primary rounded"></span>Total Threands: 993<i class="ri-arrow-down-line"></i>
+										</span>
+									</li>
+									<li class="line-height-3">
+										<span class="text-success total-progress position-relative pl-2">
+											<span class="bg-success rounded"></span>Total Handles: 26957<i class="ri-arrow-up-line"></i>
+										</span>
+									</li>
+								</ul>
 							</div>
 						</div>
-						<ul class="list-inline p-0 mt-4">
-							<li class="mb-3">
-								<div class="d-flex justify-content-between align-items-center">
-									<h5>perfBenchmark_invalid_v1</h5>
-									<div class="btn border-none alert-danger">48.428</div>
-								</div>
-								<p class="mb-0">us-west-2</p>
-							</li>
-							<li class="mb-3">
-								<div class="d-flex justify-content-between align-items-center">
-									<h5>perfBenchmark_invalid_v1</h5>
-									<div class="btn border-none alert-dark">48.428</div>
-								</div>
-								<p class="mb-0">us-west-2</p>
-							</li>
-						</ul>
-						<a href="#" class="d-block text-center mt-4 text-black font-weight-500">View all<i class="ri-arrow-down-s-line"></i></a>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-5">
-				<div class="iq-card iq-card-block iq-card-stretch iq-card-height bg-danger">
-					<div class="iq-card-body">
-						<div class="d-flex justify-content-between align-items-center">
-							<div class="icon avatar-70 bg-white text-danger iq-border-alert rounded-circle line-height-5 text-center">
-								<i class="ri-alert-line"></i>
-							</div>
-							<div class="right-detail text-right">
-								<p class="mb-0">Error Rate</p>
-								<h3 class="text-white">54.754<span class="font-size-12">%</span></h3>
+		</div>
+		<div class="col-lg-8">
+			<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+				<div class="iq-card-header d-flex justify-content-between">
+					<div class="iq-header-title">
+						<h4 class="card-title">Server Traffic Source</h4>
+					</div>
+					<div class="iq-card-header-toolbar d-flex align-items-center">
+						<div class="dropdown">
+							<span class="dropdown-toggle dropdown-bg iq-bg-danger" id="dropdownMenuButton1" data-toggle="dropdown">
+								This Year<i class="ri-arrow-down-s-line ml-1 text-danger"></i>
+							</span>
+							<div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton1">
+								<a class="dropdown-item" href="#">
+									<i class="ri-eye-fill mr-2"></i>View</a>
+								<a class="dropdown-item" href="#">
+									<i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
+								<a class="dropdown-item" href="#">
+									<i class="ri-pencil-fill mr-2"></i>Edit</a>
+								<a class="dropdown-item" href="#">
+									<i class="ri-printer-fill mr-2"></i>Print</a>
+								<a class="dropdown-item" href="#">
+									<i class="ri-file-download-fill mr-2"></i>Download</a>
 							</div>
 						</div>
-						<ul class="list-inline p-0 mt-5">
-							<li class="mb-3">
-								<div class="d-flex justify-content-between align-items-center">
-									<h5 class="text-white">perfBenchmark_invalid_v1</h5>
-									<div class="btn bg-white">45.365</div>
-								</div>
-								<p class="mb-0">us-west-2</p>
-							</li>
-							<li class="mb-3">
-								<div class="d-flex justify-content-between align-items-center">
-									<h5 class="text-white">perfBenchmark_invalid_v1</h5>
-									<div class="btn iq-bg-danger">20.458</div>
-								</div>
-								<p class="mb-0">us-west-2</p>
-							</li>
-						</ul>
-						<a href="#" class="d-block text-center mt-4 text-white font-weight-500">View all<i class="ri-arrow-down-s-line"></i></a>
+					</div>
+				</div>
+				<div class="iq-card-body">
+					<div id="report-chart-02" style="min-height: 150px;"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="iq-card iq-card-block iq-card-stretch iq-card-height bg-primary rounded background-image-overlap">
+				<div class="iq-card-body">
+					<div class="d-flex align-items-center mb-3">
+						<div><img class="rounded" src="images/page-img/38.png" alt=""></div>
+						<h5 class="pl-3 text-white">Unauthorized Threats has been Terminated</h5>
+					</div>
+					<p class="mb-2">
+						<span class="text-white">5</span>
+						Unnecessary Data</p>
+					<p class="mb-2">
+						<span class="text-white">12</span>
+						Undentified Source Data</p>
+					<p class="mb-3">
+						<span class="text-white">8</span>
+						Unused Images</p>
+					<button type="submit" class="btn w-100 btn-white mt-4 text-primary viwe-more">View More</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-8">
+			<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+				<div class="iq-card-header d-flex justify-content-between">
+					<div class="iq-header-title">
+						<h4 class="card-title">Bandwidth Public</h4>
+					</div>
+					<div class="mt-1">
+						<div class="d-flex align-items-center justify-content-between">
+							<a href="javascript:void();" class="d-flex align-items-center mr-4">
+								<span class="bg-danger p-1 rounded mr-2"></span>
+								<p class="text-danger mb-0">Lowest Speed
+								</p>
+							</a>
+							<a href="javascript:void();" class="d-flex align-items-center">
+								<span class="bg-primary p-1 rounded mr-2"></span>
+								<p class="text-primary mb-0">Highest Speed</p>
+							</a>
+						</div>
+					</div>
+				</div>
+				<div class="iq-card-body">
+					<div id="iq-income-chart"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-4">
+			<div class="iq-card">
+				<div class="iq-card-body box iq-box-relative rounded">
+					<div class="d-flex align-items-center">
+						<div class="float-left progress-round income-progress disk-usage" data-value="80">
+							<span class="progress-left">
+								<span class="progress-bar border-success" style="transform: rotate(108deg);"></span>
+							</span>
+							<span class="progress-right">
+								<span class="progress-bar border-primary" style="transform: rotate(180deg);"></span>
+							</span>
+						</div>
+						<div class="pl-3">
+							<h5 class="d-block mt-0 mb-1 text-black">Disk Usage</h5>
+							<ul class="float-right d-inline-block p-0 m-0 list-inline">
+								<li class="line-height-3">
+									<span class="text-danger total-progress position-relative pl-2 font-size-12 font-weight-500">
+										<span class="bg-danger rounded"></span>Max Usage</span>
+								</li>
+								<li class="line-height-3">
+									<span class="text-primary total-progress position-relative pl-2 font-size-12 font-weight-500">
+										<span class="bg-primary rounded"></span>Average Usage</span>
+								</li>
+								<li class="line-height-3">
+									<span class="text-success total-progress position-relative pl-2 font-size-12 font-weight-500">
+										<span class="bg-success rounded"></span>Minimum Usage</span>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-7">
+			<div class="iq-card">
+				<div class="iq-card-header d-flex justify-content-between">
+					<div class="iq-header-title">
+						<h4 class="card-title">Load Average</h4>
+					</div>
+				</div>
+				<div class="iq-card-body p-0">
+					<div id="chart-9"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-6 row m-0 p-0">
+			<div class="col-sm-6">
 				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
 					<div class="iq-card-header d-flex justify-content-between">
 						<div class="iq-header-title">
-							<h4 class="card-title">Project Tests</h4>
-						</div>
-						<div class="iq-card-header-toolbar d-flex align-items-center">
-							<div class="dropdown">
-                                 <span class="dropdown-toggle dropdown-bg iq-bg-danger" id="dropdownMenuButton2" data-toggle="dropdown">
-                                 Order by Creation<i class="ri-arrow-down-s-line ml-1 text-danger"></i>
-                                 </span>
-								<div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton2">
-									<a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-									<a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-									<a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
-									<a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Print</a>
-									<a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-								</div>
-								<span class="dropdown-toggle dropdown-bg iq-bg-primary ml-4" id="dropdownMenuButton3" data-toggle="dropdown">
-                                 Sort by Name<i class="ri-arrow-down-s-line ml-1 text-primary"></i>
-                                 </span>
-								<div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton3">
-									<a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-									<a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-									<a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
-									<a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Print</a>
-									<a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-								</div>
-							</div>
+							<h4 class="card-title">CPU Daily Usage</h4>
 						</div>
 					</div>
-					<div class="iq-card-body">
-						<div class="table-responsive">
-							<table class="table mb-0 mt-2 table-borderless table-test">
-								<tbody>
-								<tr>
-									<td>
-										<h6>Retail Int</h6>
-										<p class="mb-0">Author: Jason...</p>
-									</td>
-									<td>
-										<p class="mb-0">2018/03/29 @07:25</p>
-										<span class="text-primary">Last Modified</span>
-									</td>
-									<td class="text-right">
-										<div class="text-close"><i class="ri-alert-fill"></i></div>
-										<span class="text-close">Test Inomplete</span>
-									</td>
-									<td class="float-right">
-										<div class="d-flex align-items-center text-right">
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-danger font-size-18"><i class="ri-pencil-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-primary font-size-18"><i class="ri-calendar-2-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-success font-size-18"><i class="ri-play-fill"></i></a>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<h6>Retail Int</h6>
-										<p class="mb-0">Author: Jason...</p>
-									</td>
-									<td>
-										<p class="mb-0">2018/03/29 @07:25</p>
-										<span class="text-primary">Last Modified</span>
-									</td>
-									<td class="text-right">
-										<div class="text-success">0/3</div>
-										<p class="mb-0">Active Runs</p>
-									</td>
-									<td class="float-right">
-										<div class="d-flex align-items-center text-right">
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-danger font-size-18"><i class="ri-pencil-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-primary font-size-18"><i class="ri-calendar-2-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-success font-size-18"><i class="ri-play-fill"></i></a>
-										</div>
-									</td>
-								</tr>
-								<tr>
-									<td>
-										<h6>Retail Int</h6>
-										<p class="mb-0">Author: Jason...</p>
-									</td>
-									<td>
-										<p class="mb-0">2018/03/29 @07:25</p>
-										<span class="text-primary">Last Modified</span>
-									</td>
-									<td class="text-right">
-										<div class="text-success">2/3</div>
-										<p class="mb-0">Active Runs</p>
-									</td>
-									<td class="float-right">
-										<div class="d-flex align-items-center text-right">
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-danger font-size-18"><i class="ri-pencil-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-primary font-size-18"><i class="ri-calendar-2-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-success font-size-18"><i class="ri-play-fill"></i></a>
-										</div>
-									</td>
-								</tr>
-								</tbody>
-							</table>
-							<a href="#" class="d-block text-center text-black font-weight-500">View all<i class="ri-arrow-down-s-line"></i></a>
+					<div class="iq-card-body pt-0">
+						<div id="home-chart-11"></div>
+						<div class="text-center">
+							<h4>50.03%</h4>
+							<p class="mb-0">CPU usage is<span class="text-primary pl-2">good</span>
+							</p>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-8">
-				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
-					<div class="iq-card-header d-flex justify-content-between">
-						<div class="iq-header-title">
-							<h4 class="card-title">Activites</h4>
-						</div>
-						<div class="mt-1">
-							<div class="d-flex align-items-center justify-content-between">
-								<label class="mb-0 mr-2">Data Type: </label>
-								<div class="custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
-									<input type="checkbox" class="custom-control-input bg-primary" id="customCheck-1" checked="">
-									<label class="custom-control-label" for="customCheck-1"> Operations</label>
-								</div>
-								<div class="custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
-									<input type="checkbox" class="custom-control-input bg-success" id="customCheck-2" checked="">
-									<label class="custom-control-label" for="customCheck-2">API Calls</label>
-								</div>
-								<div class="custom-control custom-checkbox custom-checkbox-color-check custom-control-inline">
-									<input type="checkbox" class="custom-control-input bg-danger" id="customCheck-3" checked="">
-									<label class="custom-control-label" for="customCheck-3">Errors</label>
+			<div class="col-sm-6">
+				<div class="iq-card bg-danger">
+					<div class="iq-card-body box iq-box-relative">
+						<div class="d-flex flex-wrap justify-content-between align-items-center">
+							<div class="col-4 p-0">
+								<div class="float-left progress-round income-progress mr-2" data-value="80">
+									<span class="progress-left">
+										<span class="progress-bar border-white" style="transform: rotate(108deg);"></span>
+									</span>
+									<span class="progress-right">
+										<span class="progress-bar border-white" style="transform: rotate(180deg);"></span>
+									</span>
+									<div class="progress-value w-100 h-100 rounded d-flex align-items-center justify-content-center text-center">
+										<div class="h4 mb-0">12</div>
+									</div>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="iq-card-body">
-						<div id="activies-chart"></div>
-					</div>
-				</div>
-			</div>
-			<div class="col-lg-4">
-				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
-					<div class="iq-card-header d-flex justify-content-between">
-						<div class="iq-header-title">
-							<h4 class="card-title">Activities Percentage</h4>
-						</div>
-						<div class="iq-card-header-toolbar d-flex align-items-center">
-							<div class="dropdown">
-                                 <span class="dropdown-toggle dropdown-bg iq-bg-dark" id="dropdownMenuButton4" data-toggle="dropdown">
-                                 Week<i class="ri-arrow-down-s-line ml-1 text-dark"></i>
-                                 </span>
-								<div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton4">
-									<a class="dropdown-item" href="#"><i class="ri-eye-fill mr-2"></i>View</a>
-									<a class="dropdown-item" href="#"><i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
-									<a class="dropdown-item" href="#"><i class="ri-pencil-fill mr-2"></i>Edit</a>
-									<a class="dropdown-item" href="#"><i class="ri-printer-fill mr-2"></i>Print</a>
-									<a class="dropdown-item" href="#"><i class="ri-file-download-fill mr-2"></i>Download</a>
-								</div>
+							<div class="col-8 pr-0">
+								<h5 class="d-block mt-2 mb-3 text-white">Most Recent Alarams</h5>
 							</div>
 						</div>
 					</div>
-					<div class="iq-card-body">
-						<div class="activities-content position-relative mt-5">
-							<div class="avatar-235 activity activity-1 rounded-circle bg-danger text-center">
-								<h2 class="text-white line-height-4">51%</h2>
-								<p class="mb-0 line-height-3">Increase</p>
+				</div>
+				<div class="iq-card">
+					<div class="iq-card-body box iq-box-relative rounded">
+						<div class="d-flex align-items-center">
+							<div class="float-left progress-round heatmap-progress" data-value="80">
+								<span class="progress-left">
+									<span class="progress-bar border-primary" style="transform: rotate(108deg);"></span>
+								</span>
+								<span class="progress-right">
+									<span class="progress-bar border-success" style="transform: rotate(180deg);"></span>
+								</span>
 							</div>
-							<div class="avatar-155 m-auto activity activity-2 rounded-circle bg-primary text-center">
-								<h3 class="text-white line-height-4">31%</h3>
-								<p class="mb-0 line-height-3">Increase</p>
-							</div>
-							<div class="avatar-110 m-auto activity activity-3 rounded-circle bg-success text-center">
-								<h3 class="text-white line-height-4">8%</h3>
-								<p class="mb-0 line-height-3">Decrease</p>
-							</div>
-						</div>
-						<div class="d-flex justify-content-between mb-1 mt-5">
-							<div class="text-center">
-								<h3>251</h3>
-								<p class="mb-0">Operations</p>
-							</div>
-							<div class="text-center">
-								<h3>198</h3>
-								<p class="mb-0">API Calls</p>
-							</div>
-							<div class="text-center">
-								<h3>21</h3>
-								<p class="mb-0">Errors</p>
+							<div class="pl-3">
+								<h5 class="d-block mt-0 mb-1 text-black">Heat Map</h5>
+								<ul class="d-inline-block p-0 m-0 list-inline">
+									<li class="line-height-3">
+										<span class="text-danger total-progress position-relative pl-2 font-size-12 font-weight-500">
+											<span class="bg-danger rounded"></span>Clear</span>
+									</li>
+									<li class="line-height-3">
+										<span class="text-primary total-progress position-relative pl-2 font-size-12 font-weight-500">
+											<span class="bg-primary rounded"></span>Critical</span>
+									</li>
+									<li class="line-height-3">
+										<span class="text-success total-progress position-relative pl-2 font-size-12 font-weight-500">
+											<span class="bg-success rounded"></span>Trouble</span>
+									</li>
+								</ul>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="col-lg-12">
-				<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
-					<div class="iq-card-header d-flex justify-content-between">
-						<div class="iq-header-title">
-							<h4 class="card-title">Acme API Monitors</h4>
-						</div>
-						<div class="iq-card-header-toolbar d-flex align-items-center">
-							<div class="dropdown">
-								<span class="btn bg-danger">Add Monitor</span>
+		</div>
+		<div class="col-lg-6">
+			<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+				<div class="iq-card-header d-flex justify-content-between">
+					<div class="iq-header-title">
+						<h4 class="card-title">Ram Usage</h4>
+					</div>
+				</div>
+				<div class="iq-card-body">
+					<div id="report-chart-04"></div>
+				</div>
+			</div>
+		</div>
+		<div class="col-lg-12">
+			<div class="iq-card iq-card-block iq-card-stretch iq-card-height">
+				<div class="iq-card-header d-flex justify-content-between">
+					<div class="iq-header-title">
+						<h4 class="card-title">Active Instances</h4>
+					</div>
+					<div class="iq-card-header-toolbar d-flex align-items-center">
+						<div class="dropdown">
+							<span class="dropdown-toggle text-primary" id="dropdownMenuButton2" data-toggle="dropdown">
+								<i class="ri-more-2-fill"></i>
+							</span>
+							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton2">
+								<a class="dropdown-item" href="#">
+									<i class="ri-eye-fill mr-2"></i>View</a>
+								<a class="dropdown-item" href="#">
+									<i class="ri-delete-bin-6-fill mr-2"></i>Delete</a>
+								<a class="dropdown-item" href="#">
+									<i class="ri-pencil-fill mr-2"></i>Edit</a>
+								<a class="dropdown-item" href="#">
+									<i class="ri-printer-fill mr-2"></i>Print</a>
+								<a class="dropdown-item" href="#">
+									<i class="ri-file-download-fill mr-2"></i>Download</a>
 							</div>
 						</div>
 					</div>
-					<div class="iq-card-body">
-						<div class="table-responsive">
-							<table class="table mb-0 mt-2 table-borderless table-test tbl-server-info">
-								<thead>
-								<tr class="text-center">
-									<th scope="col" class="text-left">Name</th>
-									<th scope="col">Status</th>
-									<th scope="col">Performance</th>
-									<th scope="col">Uptime 24 Hours</th>
-									<th scope="col">Last Run</th>
-									<th scope="col">Actions</th>
+				</div>
+				<div class="iq-card-body">
+					<div class="table-responsive">
+						<table class="table mb-0 table-borderless tbl-server-info">
+							<thead>
+								<tr>
+									<th scope="col">Servers</th>
+									<th scope="col"></th>
+									<th scope="col">IP Address</th>
+									<th scope="col">Created</th>
+									<th scope="col">Tag</th>
+									<th scope="col">Provider</th>
+									<th scope="col"></th>
 								</tr>
-								</thead>
-								<tbody>
+							</thead>
+							<tbody>
 								<tr>
 									<td>
-										<h6>Facebook/whitehouse</h6>
-										<div class="btn iq-bg-danger mt-2">Sample</div>
-									</td>
-									<td class="text-center">
-										<div class="text-success font-size-24"><i class="ri-arrow-up-fill"></i></div>
-									</td>
-									<td class="text-center">
-										<div class="api-chart-01 d-inline-block"></div>
-										<span class="d-block mt-2 text-danger">81ms</span>
-									</td>
-									<td class="text-center">
-										<div class="apitime-chart-01 d-inline-block"></div>
-										<span class="d-block mt-2 text-danger">65%</span>
-									</td>
-									<td class="text-center">
-										<div class="text-black">2018/03/29 @07:25</div>
-									</td>
-									<td class="text-center m-auto">
-										<div class="d-flex align-items-center justify-content-center">
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-danger font-size-18"><i class="ri-bar-chart-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-dark font-size-18"><i class="ri-delete-bin-7-fill"></i></a>
+										<div class="avatar-40 text-center rounded-circle iq-bg-danger position-relative">
+											<span class="font-size-20 align-item-center">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<span class="bg-success dots"></span>
+											</span>
 										</div>
 									</td>
-								</tr>
-								<tr>
 									<td>
-										<h6>Facebook/whitehouse</h6>
+										<h6>Noveruche Admin</h6>
+										<span class="text-body font-weight-400">8GB/80GB/SF02-Ubuntu Iconic- jfkakf-daksl...</span>
 									</td>
-									<td class="text-center">
-										<div class="text-close font-size-24"><i class="ri-arrow-down-fill"></i></div>
+									<td>192.168.130.26</td>
+									<td>2 Months ago</td>
+									<td>
+										<div class="text-danger">Web Server</div>
 									</td>
-									<td class="text-center">
-										<div class="api-chart-02 d-inline-block"></div>
-										<span class="d-block mt-2 text-danger">81ms</span>
-									</td>
-									<td class="text-center">
-										<div class="apitime-chart-02 d-inline-block"></div>
-										<span class="d-block mt-2 text-primary">65%</span>
-									</td>
-									<td class="text-center">
-										<div class="text-black">2018/03/29 @07:25</div>
-									</td>
-									<td class="text-center m-auto">
-										<div class="d-flex align-items-center justify-content-center">
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-primary font-size-18"><i class="ri-pencil-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-danger font-size-18"><i class="ri-bar-chart-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-dark font-size-18"><i class="ri-repeat-2-line"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-success font-size-18"><i class="ri-pause-line"></i></a>
-										</div>
+									<td>Indioserver</td>
+									<td>
+										<span class="text-black font-size-24" id="dropdownMenuButton3">
+											<i class="ri-more-fill"></i>
+										</span>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<h6>Facebook/whitehouse</h6>
-									</td>
-									<td class="text-center">
-										<div class="text-success font-size-24"><i class="ri-arrow-up-fill"></i></div>
-									</td>
-									<td class="text-center">
-										<div class="api-chart-03 d-inline-block"></div>
-										<span class="d-block mt-2 text-danger">81ms</span>
-									</td>
-									<td class="text-center">
-										<div class="apitime-chart-03 d-inline-block"></div>
-										<span class="d-block mt-2 text-primary">65%</span>
-									</td>
-									<td class="text-center">
-										<div class="text-black">2018/03/29 @07:25</div>
-									</td>
-									<td class="text-center m-auto">
-										<div class="d-flex align-items-center justify-content-center">
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-primary font-size-18"><i class="ri-pencil-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-danger font-size-18"><i class="ri-bar-chart-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-dark font-size-18"><i class="ri-repeat-2-line"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-success font-size-18"><i class="ri-pause-line"></i></a>
+										<div class="avatar-40 text-center rounded-circle iq-bg-danger position-relative">
+											<span class="font-size-20 align-item-center">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<span class="bg-success dots"></span>
+											</span>
 										</div>
+									</td>
+									<td>
+										<h6>Developing Hier</h6>
+										<span class="text-body font-weight-400">8GB/80GB/SF02-Ubuntu Iconic- jfkakf-daksl...</span>
+									</td>
+									<td>192.168.130.26</td>
+									<td>4 Months ago</td>
+									<td>
+										<div class="text-primary">Desky</div>
+									</td>
+									<td>Jeniorde</td>
+									<td>
+										<span class="text-black font-size-24" id="dropdownMenuButton4">
+											<i class="ri-more-fill"></i>
+										</span>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<h6>Facebook/whitehouse</h6>
-										<div class="btn iq-bg-danger mt-2">Sample</div>
-									</td>
-									<td class="text-center">
-										<div class="text-close font-size-24"><i class="ri-arrow-down-fill"></i></div>
-									</td>
-									<td class="text-center">
-										<div class="api-chart-04 d-inline-block"></div>
-										<span class="d-block mt-2 text-danger">81ms</span>
-									</td>
-									<td class="text-center">
-										<div class="apitime-chart-04 d-inline-block"></div>
-										<span class="d-block mt-2 text-primary">65%</span>
-									</td>
-									<td class="text-center">
-										<div class="text-black">2018/03/29 @07:25</div>
-									</td>
-									<td class="text-center m-auto">
-										<div class="d-flex align-items-center justify-content-center">
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-danger font-size-18"><i class="ri-bar-chart-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-dark font-size-18"><i class="ri-delete-bin-7-fill"></i></a>
+										<div class="avatar-40 text-center rounded-circle iq-bg-danger position-relative">
+											<span class="font-size-20 align-item-center">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<span class="bg-success dots"></span>
+											</span>
 										</div>
+									</td>
+									<td>
+										<h6>Nalurel Dilam</h6>
+										<span class="text-body font-weight-400">8GB/80GB/SF02-Ubuntu Iconic- jfkakf-daksl...</span>
+									</td>
+									<td>192.168.130.26</td>
+									<td>5 Months ago</td>
+									<td>
+										<div class="text-success">Software</div>
+									</td>
+									<td>Walikarsi</td>
+									<td>
+										<span class="text-black font-size-24" id="dropdownMenuButton5">
+											<i class="ri-more-fill"></i>
+										</span>
 									</td>
 								</tr>
 								<tr>
 									<td>
-										<h6>Facebook/whitehouse</h6>
-									</td>
-									<td class="text-center">
-										<div class="text-success font-size-24"><i class="ri-arrow-up-fill"></i></div>
-									</td>
-									<td class="text-center">
-										<div class="api-chart-05 d-inline-block"></div>
-										<span class="d-block mt-2 text-danger">81ms</span>
-									</td>
-									<td class="text-center">
-										<div class="apitime-chart-05 d-inline-block"></div>
-										<span class="d-block mt-2 text-primary">65%</span>
-									</td>
-									<td class="text-center">
-										<div class="text-black">2018/03/29 @07:25</div>
-									</td>
-									<td class="text-center m-auto">
-										<div class="d-flex align-items-center justify-content-center">
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-primary font-size-18"><i class="ri-pencil-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 text-center ml-3 rounded-circle iq-bg-danger font-size-18"><i class="ri-bar-chart-fill"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-dark font-size-18"><i class="ri-repeat-2-line"></i></a>
-											<a href="javascript:void();" class="avatar-45 rounded-circle text-center ml-3 iq-bg-success font-size-18"><i class="ri-pause-line"></i></a>
+										<div class="avatar-40 text-center rounded-circle iq-bg-danger position-relative">
+											<span class="font-size-20 align-item-center">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<span class="bg-success dots"></span>
+											</span>
 										</div>
 									</td>
+									<td>
+										<h6>Nariokali Borji</h6>
+										<span class="text-body font-weight-400">8GB/80GB/SF02-Ubuntu Iconic- jfkakf-daksl...</span>
+									</td>
+									<td>192.168.130.26</td>
+									<td>6 Months ago</td>
+									<td>
+										<div class="text-primary">Innohouse</div>
+									</td>
+									<td>Leoharshan</td>
+									<td>
+										<span class="text-black font-size-24" id="dropdownMenuButton6">
+											<i class="ri-more-fill"></i>
+										</span>
+									</td>
 								</tr>
-								</tbody>
-							</table>
-							<div class="d-block text-center text-black font-weight-500">View all<i class="ri-arrow-down-s-line"></i></div>
-						</div>
+								<tr>
+									<td>
+										<div class="avatar-40 text-center rounded-circle iq-bg-danger position-relative">
+											<span class="font-size-20 align-item-center">
+												<i class="fa fa-user" aria-hidden="true"></i>
+												<span class="bg-success dots"></span>
+											</span>
+										</div>
+									</td>
+									<td>
+										<h6>Bulesta Karolin</h6>
+										<span class="text-body font-weight-400">8GB/80GB/SF02-Ubuntu Iconic- jfkakf-daksl...</span>
+									</td>
+									<td>192.168.130.26</td>
+									<td>6 Months ago</td>
+									<td>
+										<div class="text-danger">Rodrigez</div>
+									</td>
+									<td>Karilorni</td>
+									<td>
+										<span class="text-black font-size-24" id="dropdownMenuButton7">
+											<i class="ri-more-fill"></i>
+										</span>
+									</td>
+								</tr>
+							</tbody>
+						</table>
 					</div>
 				</div>
 			</div>

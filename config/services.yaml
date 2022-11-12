@@ -23,5 +23,10 @@ services:
         resource: '../src/EntityListener/'
         tags:
             - { name: doctrine.orm.entity_listener }
+    # App\EventListener\CustomLogoutListener:
+    #     tags:
+    #         - name: 'kernel.event_listener'
+    #           event: 'Symfony\Component\Security\Http\Event\LogoutEvent'
+    #           dispatcher: security.event_dispatcher.main
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones

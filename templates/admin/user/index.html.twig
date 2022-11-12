@@ -92,13 +92,19 @@
 												{% endfor %}
 											</td>
 											<td>
-												<span class="badge iq-bg-primary">Active</span>
+												{% if user.status == false %}
+													<span class="badge iq-bg-danger">Inactive</span>
+												{% else %}
+													<span class="badge iq-bg-success">Active</span>
+												{% endif %}
 											</td>
 											<td>
 												<div class="d-flex align-items-center list-user-action">
-													<a class="iq-bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add" href="#">
-														<i class="ri-user-add-line"></i>
+													<a class="iq-bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Activer/Désactiver" href="{{path('user_changeStatus', {id: user.id})}}" onclick="event.preventDefault(); localStorage.clear();  document.getElementById('logout-form').submit();">
+														<i class="ri-check-line"></i>
 													</a>
+													<form id="logout-form" action="{{path('user_changeStatus', {id: user.id})}}" method="POST" class="d-none"></form>
+
 													<a class="iq-bg-primary" data-toggle="tooltip" data-placement="top" title="" data-original-title="Edit" href="{{path('app_admin_user_edit', {id: user.id})}}">
 
 														<i class="ri-pencil-line"></i>
@@ -109,41 +115,41 @@
 												</div>
 											</td>
 										</tr>
-									{% endfor %}
-								{% else %}
-									<p>Aucun utilisateur trouvé</p>
-								{% endif %}
-							</tbody>
-						</table>
-					</div>
-					<div class="row justify-content-between mt-3">
-						<div id="user-list-page-info" class="col-md-6">
-							<span>Showing 1 to 5 of 5 entries</span>
-						</div>
-						<div class="col-md-6">
-							<nav aria-label="Page navigation example">
-								<ul class="pagination justify-content-end mb-0">
-									<li class="page-item disabled">
-										<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-									</li>
-									<li class="page-item active">
-										<a class="page-link" href="#">1</a>
-									</li>
-									<li class="page-item">
-										<a class="page-link" href="#">2</a>
-									</li>
-									<li class="page-item">
-										<a class="page-link" href="#">3</a>
-									</li>
-									<li class="page-item">
-										<a class="page-link" href="#">Next</a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
+									</td>
+								</tr>
+							{% endfor %}
+						{% else %}
+							<p>Aucun utilisateur trouvé</p>
+						{% endif %}
+					</tbody>
+				</table>
+			</div>
+			<div class="row justify-content-between mt-3">
+				<div id="user-list-page-info" class="col-md-6">
+					<span>Showing 1 to 5 of 5 entries</span>
+				</div>
+				<div class="col-md-6">
+					<nav aria-label="Page navigation example">
+						<ul class="pagination justify-content-end mb-0">
+							<li class="page-item disabled">
+								<a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+							</li>
+							<li class="page-item active">
+								<a class="page-link" href="#">1</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">2</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">3</a>
+							</li>
+							<li class="page-item">
+								<a class="page-link" href="#">Next</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
 			</div>
 		</div>
 	</div>
-{% endblock %}
+</div></div>{% endblock %}

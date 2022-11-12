@@ -13,7 +13,7 @@
 				</div>
 				<div class="iq-navbar-logo d-flex justify-content-between">
 					<a href="index.html" class="header-logo">
-						<img src="{{asset('images/logo.png')}}" class="img-fluid rounded-normal" alt="">
+						<img src="{{ app.user.imageName ?? asset('images/logo.png')}}" class="img-fluid rounded-normal" alt="">
 						<div class="pt-2 pl-2 logo-title">
 							<span class="text-danger text-uppercase">Server<span class="text-primary ml-1">360</span>
 							</span>
@@ -164,16 +164,28 @@
 										</div>
 									</div>
 								</a>
-								<div class="d-inline-block w-100 text-center p-3">
-									<a class="bg-primary iq-sign-btn" href="{{path('security.logout')}}" role="button">Déconnexion<i class="ri-login-box-line ml-2"></i>
 
-									</a>
+
+								<div class="d-inline-block w-100 text-center p-3">
+									{% if "ROLE_ADMIN" in app.user.roles %}
+										<a class="bg-primary iq-sign-btn" method="POST" href="{{path('security.logout')}}" role="button">Déconnexion<i class="ri-login-box-line ml-2"></i>
+
+										</a>
+									{% else %}
+										<a class="bg-primary iq-sign-btn" onclick="event.preventDefault(); document.getElementById('logout-form').submit();" role="button">Déconnexion<i class="ri-login-box-line ml-2"></i>
+										</a>
+										<form
+											id="logout-form" action="{{ path('marchand_logout') }}" method="POST" class="d-none">{# {{ csrf_field() }} #}
+										</form>
+
+									{% endif %}
+
 								</div>
 							</div>
 						</div>
-					</div>
+					</li>
 				</li>
-			</ul>
-		</nav>
-	</div>
-</div>
+			</div>
+		</li>
+	</ul>
+</nav></div></div>
